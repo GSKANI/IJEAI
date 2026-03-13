@@ -1,6 +1,5 @@
 {
   "buildCommand": "cd ijeai-journal && npm run build",
   "outputDirectory": "ijeai-journal/dist",
-  "framework": "vite",
-  "nodeVersion": "20.x"
+  "framework": "vite"
 }
