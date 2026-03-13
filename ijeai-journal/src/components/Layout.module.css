@@ -1,0 +1,170 @@
+/* ── Top Strip ── */
+.topStrip {
+  background: var(--navy);
+  color: rgba(255,255,255,0.72);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 7px 20px;
+}
+.topStrip span { color: var(--gold-light); }
+
+/* ── Masthead ── */
+.masthead {
+  background: var(--paper);
+  border-bottom: 3px solid var(--navy);
+  padding: 28px 40px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.mastheadLogo { display: flex; align-items: center; gap: 18px; }
+.logoEmblem {
+  width: 64px; height: 64px;
+  background: var(--navy);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.mastheadTitles h1 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1.2;
+}
+.mastheadTitles h1 em { font-style: normal; color: var(--teal); }
+.mastheadTitles p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.mastheadMeta {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+.issnBadge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+/* ── Nav ── */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.navInner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.navInner::-webkit-scrollbar { display: none; }
+.navLink {
+  display: block;
+  padding: 14px 18px;
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.navLink:hover { color: var(--gold-light); border-bottom-color: var(--gold-light); background: rgba(255,255,255,0.04); }
+.active { color: var(--gold-light) !important; border-bottom-color: var(--gold-light) !important; }
+.navSubmit {
+  margin-left: auto;
+  background: var(--teal) !important;
+  color: white !important;
+  border-bottom-color: transparent !important;
+}
+.navSubmit:hover { background: var(--teal-light) !important; }
+
+/* ── Main ── */
+.main { min-height: 60vh; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.65);
+  padding: 40px 0 28px;
+  margin-top: 40px;
+}
+.footerInner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footerBrand h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}
+.footerBrand p { font-size: 13px; line-height: 1.7; }
+.footerMeta {
+  margin-top: 12px !important;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+.footerCol h4 {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+}
+.footerCol a {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  padding: 4px 0;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.footerCol a:hover { color: var(--teal-light); }
+.footerBottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .footerInner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .masthead { flex-direction: column; align-items: flex-start; padding: 20px; }
+  .mastheadMeta { text-align: left; }
+  .footerInner { grid-template-columns: 1fr; gap: 28px; }
+}
