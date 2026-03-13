@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd ijeai-journal && npm run build",
+  "buildCommand": "cd ijeai-journal && npm install && npm run build",
   "outputDirectory": "ijeai-journal/dist",
   "framework": "vite"
 }
